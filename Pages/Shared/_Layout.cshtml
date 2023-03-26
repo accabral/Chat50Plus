@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon 50+ - Saúde Mental</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesheet.css" />
+    <link rel="stylesheet" href="./css/botui.min.css">
+    <link rel="stylesheet" href="./css/botui-theme-default.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="mask">
+        <div class="loader-item fa fa-spin loader-color">
+        </div>
+    </div>
+    <!-- PRELOADER END -->
+    <!-- Start of whatsapp view -->
+    <div class="container-fluid no_padding">
+        <div class="row" id="row_height">
+            <div class="col-sm-1 col-lg-1 col-xl-1 menu">
+                <nav class="nav flex-column  justify-content-center">
+                    <a class="nav-link active custom_nav" href="index.html" data-toggle="tooltip" title="Home"><i class="material-icons">home</i></a>
+                    <a class="nav-link custom_nav" href="#" data-toggle="tooltip" title="Contacts"><i class="material-icons">contacts</i></a>
+                    <a class="nav-link custom_nav" href="chat_view.html" data-toggle="tooltip" title="Chats"><i class="material-icons">chat</i></a>
+                    <a class="nav-link custom_nav" href="#" data-toggle="tooltip" title="Status"><i class="material-icons">donut_large</i></a>
+                    <a class="nav-link custom_nav" href="profile_view.html" data-toggle="tooltip" title="Profile"><i class="material-icons">account_circle</i></a>
+                    <a class="nav-link custom_nav" href="#" data-toggle="tooltip" title="Settings"><i class="material-icons">settings</i></a>
+                </nav>
+            </div>
+            <div class="col-sm-11 col-lg-11 col-xl-11 chatbox_padding">
+                <div class="row" id="chatbox">
+                    <div class="col-5 col-sm-5 col-lg-5 col-xl-5 chatlist">
+                        <div class="row chatbar">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 chat_button"><a href="#" onclick="active_chat()">CHATS</a></div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 status_button"><a href="#" onclick="active_status()">STATUS</a></div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 calls_button"><a href="#" onclick="active_calls()">CALLS</a></div>
+                        </div>
+                        <div class="row scrollchats">
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr class="clickable-row" data-href="#eva-msg">
+                                        <td>
+                                            <img src="images/avatar.png" class="img rounded-circle" />
+                                            <span class="personName">Dona Eva</span>
+                                            <span class="message-time">10:00</span>
+                                            <br>
+                                            <span class="chatMessage">Como você está se sentindo hoje?</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="#">
+                                        <td>
+                                            <img src="images/avatar.jpg" class="img rounded-circle" />
+                                            <span class="personName">Seu Antônio</span>
+                                            <span class="message-time">10:10</span>
+                                            <br>
+                                            <span class="chatMessage">Como você está se sentindo hoje?</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="#">
+                                        <td>
+                                            <img src="images/avatar.jpg" class="img rounded-circle" />
+                                            <span class="personName">Aparecida</span>
+                                            <span class="message-time">12:23</span>
+                                            <br>
+                                            <span class="chatMessage">Você precisar acreditar que tudo vai passar..</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="#">
+                                        <td>
+                                            <img src="images/avatar.jpg" class="img rounded-circle" />
+                                            <span class="personName">Dora</span>
+                                            <span class="message-time">12:24</span>
+                                            <br>
+                                            <span class="chatMessage">Até mais</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="#">
+                                        <td>
+                                            <img src="images/avatar.jpg" class="img rounded-circle" />
+                                            <span class="personName">Seu Joaquim</span>
+                                            <span class="message-time">14:55</span>
+                                            <br>
+                                            <span class="chatMessage">É muito importante pra mim ter você pra conversar.</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="#">
+                                        <td>
+                                            <img src="images/avatar.jpg" class="img rounded-circle" />
+                                            <span class="personName">Monica</span>
+                                            <span class="message-time">16:03</span>
+                                            <br>
+                                            <span class="chatMessage">Hoje estou me sentido muito melhor!</span>
+                                        </td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-7 col-sm-7 col-lg-7 col-xl-7 message-view" id="eva_msg">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of whatsapp view -->
+    <!-- Script to load full page background for header -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script>
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                document.getElementById("mask").style.display = "none";
+                document.getElementById("row_height").style.height = window.innerHeight + "px";
+                document.getElementById("chatbox").style.height = window.innerHeight - 50 + "px";
+            }
+        };
+    </script>
+    <script>
+        $(window).ready(function () {
+            if (($(window).width()) <= 426) {
+                $(".chatlist").addClass("col-12");
+                $(".message-view").addClass("col-12");
+                $("#john_msg").hide();
+                $(".clickable-row").click(function () {
+                    $(".chatlist").css("display", "none");
+                    $("#john_msg").show();
+                });
+            } else {
+                $(".chatlist").removeClass("col-12");
+                $(".message-view").removeClass("col-12");
+            }
+        });
+        $(window).resize(function () {
+            if (($(window).width()) <= 426) {
+                $(".chatlist").addClass("col-12");
+                $(".message-view").addClass("col-12");
+            } else {
+                $(".chatlist").removeClass("col-12");
+                $(".message-view").removeClass("col-12");
+            }
+        });
+        $(document).ready(function ($) {
+            $(".clickable-row").click(function () {
+                window.location = $(this).data("href");
+            });
+
+            $('.reply-send').click(function () {
+                console.log('clicou');
+                if ($('#message_send').val()) {
+                    sendTextMessage($('#message_send').val());
+                }
+            });
+        });
+    </script>
+    <!-- end of script -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

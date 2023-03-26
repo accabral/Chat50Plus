@@ -1,0 +1,307 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("/Content/Images/background-aqua-color.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 450px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0;
+    position: absolute;
+    margin-left: 26.5%;
+    margin-top: 1%;
+    border-radius: 88px;
+}
+
+    /* Style the header links */
+    .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Change the background color on mouse-over */
+        .header a:hover {
+            background-color: #a5e4dc;
+            border: hidden;
+            color: black;
+        }
+
+        /* Style the active/current link*/
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+    /* Style the logo img  */
+    .header img {
+        width: 99px;
+        height: 99px;
+    }
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+
+#dentistabr-bot::after {
+    content: 'Desenvolvido pela www.baruk.me';
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    float: right;
+    padding-top: 5px;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+    }
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 0;
+        margin-left: 75%;
+    }
+
+    .header a {
+        float: right;
+        display: block;
+        text-align: center;
+    }
+
+    .header-right {
+        float: none;
+        text-align: center;
+    }
+
+    .header img {
+        width: 72px;
+        height: 72px;        
+    }
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+body {
+    padding: 30px 0px 60px;
+}
+
+.panel > .list-group .list-group-item:first-child {
+    /*border-top: 1px solid rgb(204, 204, 204);*/
+}
+
+.panel {
+    border: 0;
+    background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+    background-color: #ebebeb;
+    border: 0;
+}
+
+.panel > .list-group, .panel > .panel-collapse > .list-group {
+    margin-bottom: 0;
+}
+
+.input-group.c-search {
+    margin-bottom: 5px;
+}
+
+div.list-group {
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+    div.list-group .avatar {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    div.list-group .description {
+        padding: 5px;
+        line-height: normal;
+    }
+
+.list-group-item {
+    padding: 5px 0 10px 0;
+    font-size: 12px;
+}
+
+    .list-group-item:first-child {
+        border: 0;
+    }
+
+.list-group li:first-child a {
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.list-group li:last-child a {
+    -moz-border-radius-bottomleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: inline-block !important;
+    }
+
+    .block {
+        display: block !important;
+        width: 100%;
+        height: 1px !important;
+    }
+}
+
+.c-search > .form-control {
+    border-radius: 0px;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    font-size: 1em;
+    padding: 3px 6px;
+    height: 44px;
+    outline: none !important;
+}
+
+    .c-search > .form-control:focus {
+        outline: 0px !important;
+        -webkit-appearance: none;
+        box-shadow: none;
+    }
+
+.c-search > .input-group-btn .btn {
+    border-radius: 0px;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    height: 44px;
+}
+
+
+.c-list {
+    padding: 0px;
+    min-height: 44px;
+}
+
+.title {
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+ul.c-controls {
+    list-style: none;
+    margin: 0px;
+    min-height: 44px;
+}
+
+    ul.c-controls li {
+        margin-top: 8px;
+        float: left;
+    }
+
+        ul.c-controls li a {
+            font-size: 1.7em;
+            padding: 11px 10px 6px;
+        }
+
+            ul.c-controls li a i {
+                min-width: 24px;
+                text-align: center;
+            }
+
+            ul.c-controls li a:hover {
+                background-color: rgba(51, 51, 51, 0.2);
+            }
+
+.c-toggle {
+    font-size: 1.7em;
+}
+
+.name {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.c-info {
+    padding: 5px 10px;
+    font-size: 1.25em;
+}

@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "WhatsApp";
+}
+
+<header class="detail_div">
+    <div class="profile_pic">
+        <img src="images/avatar.png" class="profile_img" />
+    </div>
+    <div class="name_div">
+        <div class="person_name">Dona Eva</div>
+        <div class="last_seen">Visto pela última vez @DateTime.Now.ToString("HH:mm")</div>
+    </div>
+    <div class="image_div">
+        <a href="#" class="material_icon"><i class="material-icons">search</i></a>
+        <a href="#" class="material_icon"><i class="material-icons">attach_file</i></a>
+        <a href="#" class="material_icon"><i class="material-icons">more_vert</i></a>
+    </div>
+</header>
+
+<div class="botui-app-container" id="alperseguros-bot">
+    <bot-ui></bot-ui>
+</div>
+
+<footer class="reply">
+    <div class="reply-emojis">
+        <i class="material-icons">mood</i>
+    </div>
+    <div class="reply-main">
+        <input type="text" id="message_send" name="sendMessage" placeholder="Escreva sua mensagem">
+    </div>
+    <div class=" reply-recording">
+        <i class="material-icons">mic_none</i>
+    </div>
+    <div class="reply-send">
+        <i class="material-icons">send</i>
+    </div>
+</footer>
+<script src="~/js/vue.min.js"></script>
+<script src="~/js/botui.js"></script>
+<script src="~/js/alperseguros-bot.js"></script>
+<script src="~/js/vue-select.js"></script>
